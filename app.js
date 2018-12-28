@@ -5,7 +5,11 @@ const app = express();
 const HOST = 'localhost';
 const PORT = process.env.PORT || 5000;
 
-app.use('/', (req, res, next) => {
+app.get('/welcome', (req, res, next) => {
+  res.send('Welcome');
+});
+
+app.get('/', (req, res, next) => {
   res.send('Hello Express updated!');
 });
 
